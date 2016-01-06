@@ -1,5 +1,8 @@
 #!/usr/local/bin/python3.5
 
+# Author : Stéphane Küng
+#   Date : 6.1.2016
+
 from Crypto.Hash import SHA256
 
 class Subject:
@@ -71,24 +74,24 @@ def sha256(data):
     return SHA256.new(data.encode()).hexdigest()[0:10]
 
 
-n0 = Node("n0")
+n0 = Node("n0", "Root node")
 n0.criteria.append(Criterion("temp","<",1000))
-n1 = Node("n1")
+n1 = Node("n1", "Node 1")
 n1.criteria.append(Criterion("temp",">",0))
-n2 = Node("n2")
+n2 = Node("n2", "Node 2")
 n2.criteria.append(Criterion("temp","<=",0))
-n3 = Node("n3")
+n3 = Node("n3", "Node 3")
 n3.criteria.append(Criterion("temp","<",-10))
-n4 = Node("n4")
+n4 = Node("n4", "Node 4")
 n4.criteria.append(Criterion("temp",">=",-10))
-n5 = Node("n5")
+n5 = Node("n5", "Node 5")
 n5.criteria.append(Criterion("temp","<",-20))
-n6 = Node("n6")
+n6 = Node("n6", "Node 6")
 n6.criteria.append(Criterion("temp",">",-5))
-n7 = Node("n7")
+n7 = Node("n7", "Node 7")
 n7.criteria.append(Criterion("temp",">",-30))
 n7.criteria.append(Criterion("snow","<",3))
-n8 = Node("n8")
+n8 = Node("n8", "Node 8")
 n8.criteria.append(Criterion("snow",">=",3))
 n8.criteria.append(Criterion("temp","<",-40))
 
