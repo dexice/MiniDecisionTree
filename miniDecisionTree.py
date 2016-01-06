@@ -75,7 +75,6 @@ def sha256(data):
 
 
 n0 = Node("n0", "Root node")
-n0.criteria.append(Criterion("temp","<",1000))
 n1 = Node("n1", "Node 1")
 n1.criteria.append(Criterion("temp",">",0))
 n2 = Node("n2", "Node 2")
